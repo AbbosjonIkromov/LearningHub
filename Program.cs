@@ -19,7 +19,7 @@ internal class Program
         var instructorService = new InstructorService(context);
         var enrollmentService = new EnrollmentService(context);
 
-
+        // Eager loading 
         var cateoryByCategory = context.Categories
             .Include(r => r.Courses)
             .Where(r => r.CategoryId == 44);
