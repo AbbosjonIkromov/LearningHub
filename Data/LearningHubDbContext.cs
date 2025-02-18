@@ -9,15 +9,14 @@ using LearningHub.Data.ModelBuilderExtension;
 using LearningHub.Entities;
 using LearningHub.Entities.Enums;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Diagnostics;
+using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
 
 namespace LearningHub.Data
 {
     public class LearningHubDbContext : DbContext
     {
-        private readonly string _connectionString =
-            "Host=localhost;Port=5432;Database=learning_hub; User Id=postgres;Password=postgresql;";
-        
         public DbSet<Category> Categories { get; set; }
         public DbSet<Course> Courses { get; set; }
         public DbSet<Student> Students { get; set; }
@@ -26,8 +25,13 @@ namespace LearningHub.Data
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseNpgsql(_connectionString)
-                .LogTo(Console.WriteLine, LogLevel.Information)
+            var config = new ConfigurationBuilder()
+                .AddJsonFile("appsettings.json")
+                .SetBasePath(Directory.GetCurrentDirectory())
+                .Build();
+
+            optionsBuilder.UseNpgsql(config.GetConnectionString("DefaultConnection"))
+                .LogTo(Console.WriteLine, new[] { RelationalEventId.CommandExecuted})
                 .UseSnakeCaseNamingConvention()
                 .AddInterceptors(new AuditInterceptor());
         }
