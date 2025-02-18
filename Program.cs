@@ -22,7 +22,8 @@ internal class Program
         // Eager loading 
         var cateoryByCategory = context.Categories
             .Include(r => r.Courses)
-            .Where(r => r.CategoryId == 44);
+            .Where(r => r.CategoryId == 44)
+            .ToList();
 
         foreach (var category in cateoryByCategory)
         {
