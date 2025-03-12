@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using LearningHub.App.Dtos.Course;
+using LearningHub.App.Exceptions;
 using LearningHub.App.Services.Contracts;
 using LearningHub.DataAccess.Repository.Contracts;
 using LearningHub.Entities;
@@ -40,7 +41,7 @@ namespace LearningHub.App.Services.Implementations
 
             if (course is null)
             {
-                throw new KeyNotFoundException($"Course with {id} not found");
+                throw new RecordNotFoundException($"Course with {id} not found");
             }
 
             return new CourseDto
@@ -81,7 +82,7 @@ namespace LearningHub.App.Services.Implementations
 
             if (course is null)
             {
-                throw new KeyNotFoundException($"Course with {id} not found");
+                throw new RecordNotFoundException($"Course with {id} not found");
             }
 
             course.CourseName = updateCourseDto.CourseName;
@@ -107,7 +108,7 @@ namespace LearningHub.App.Services.Implementations
 
             if (course is null)
             {
-                throw new KeyNotFoundException($"Course with {id} not found");
+                throw new RecordNotFoundException($"Course with {id} not found");
             }
 
             await _courseRepository.Delete(course);

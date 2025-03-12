@@ -49,17 +49,20 @@
             "application/json": {
               "schema": {
                 "$ref": "#/components/schemas/CreateCategoryDto"
-              }
+              },
+              "example": {"categoryName":"Education"}
             },
             "text/json": {
               "schema": {
                 "$ref": "#/components/schemas/CreateCategoryDto"
-              }
+              },
+              "example": {"categoryName":"Education"}
             },
             "application/*+json": {
               "schema": {
                 "$ref": "#/components/schemas/CreateCategoryDto"
-              }
+              },
+              "example": {"categoryName":"Education"}
             }
           }
         },
@@ -90,17 +93,20 @@
             "application/json": {
               "schema": {
                 "$ref": "#/components/schemas/UpdateCategoryDto"
-              }
+              },
+              "example": {"categoryName":"Education"}
             },
             "text/json": {
               "schema": {
                 "$ref": "#/components/schemas/UpdateCategoryDto"
-              }
+              },
+              "example": {"categoryName":"Education"}
             },
             "application/*+json": {
               "schema": {
                 "$ref": "#/components/schemas/UpdateCategoryDto"
-              }
+              },
+              "example": {"categoryName":"Education"}
             }
           }
         },
@@ -177,17 +183,20 @@
             "application/json": {
               "schema": {
                 "$ref": "#/components/schemas/CreateCourseDto"
-              }
+              },
+              "example": {"courseName":"Software Development","categoryId":25,"difficultyLevel":1,"price":99.90}
             },
             "text/json": {
               "schema": {
                 "$ref": "#/components/schemas/CreateCourseDto"
-              }
+              },
+              "example": {"courseName":"Software Development","categoryId":25,"difficultyLevel":1,"price":99.90}
             },
             "application/*+json": {
               "schema": {
                 "$ref": "#/components/schemas/CreateCourseDto"
-              }
+              },
+              "example": {"courseName":"Software Development","categoryId":25,"difficultyLevel":1,"price":99.90}
             }
           }
         },
@@ -218,17 +227,20 @@
             "application/json": {
               "schema": {
                 "$ref": "#/components/schemas/UpdateCourseDto"
-              }
+              },
+              "example": {"courseName":"Software Development","categoryId":25,"difficultyLevel":1,"price":99.90}
             },
             "text/json": {
               "schema": {
                 "$ref": "#/components/schemas/UpdateCourseDto"
-              }
+              },
+              "example": {"courseName":"Software Development","categoryId":25,"difficultyLevel":1,"price":99.90}
             },
             "application/*+json": {
               "schema": {
                 "$ref": "#/components/schemas/UpdateCourseDto"
-              }
+              },
+              "example": {"courseName":"Software Development","categoryId":25,"difficultyLevel":1,"price":99.90}
             }
           }
         },
@@ -305,17 +317,20 @@
             "application/json": {
               "schema": {
                 "$ref": "#/components/schemas/CreateEnrollmentDto"
-              }
+              },
+              "example": {"studentId":25,"courseId":14,"completionStatus":2,"score":45.50}
             },
             "text/json": {
               "schema": {
                 "$ref": "#/components/schemas/CreateEnrollmentDto"
-              }
+              },
+              "example": {"studentId":25,"courseId":14,"completionStatus":2,"score":45.50}
             },
             "application/*+json": {
               "schema": {
                 "$ref": "#/components/schemas/CreateEnrollmentDto"
-              }
+              },
+              "example": {"studentId":25,"courseId":14,"completionStatus":2,"score":45.50}
             }
           }
         },
@@ -346,17 +361,20 @@
             "application/json": {
               "schema": {
                 "$ref": "#/components/schemas/UpdateEnrollmentDto"
-              }
+              },
+              "example": {"studentId":25,"courseId":14,"completionStatus":2,"score":45.50}
             },
             "text/json": {
               "schema": {
                 "$ref": "#/components/schemas/UpdateEnrollmentDto"
-              }
+              },
+              "example": {"studentId":25,"courseId":14,"completionStatus":2,"score":45.50}
             },
             "application/*+json": {
               "schema": {
                 "$ref": "#/components/schemas/UpdateEnrollmentDto"
-              }
+              },
+              "example": {"studentId":25,"courseId":14,"completionStatus":2,"score":45.50}
             }
           }
         },
@@ -433,17 +451,20 @@
             "application/json": {
               "schema": {
                 "$ref": "#/components/schemas/CreateInstructorDto"
-              }
+              },
+              "example": {"firstName":"Abbosjon","lastName":"Ikromov","email":"abbosjonIkromov25@mail.com","phoneNumber":"94 336 56 55","hireDate":"2025-01-24T00:00:00"}
             },
             "text/json": {
               "schema": {
                 "$ref": "#/components/schemas/CreateInstructorDto"
-              }
+              },
+              "example": {"firstName":"Abbosjon","lastName":"Ikromov","email":"abbosjonIkromov25@mail.com","phoneNumber":"94 336 56 55","hireDate":"2025-01-24T00:00:00"}
             },
             "application/*+json": {
               "schema": {
                 "$ref": "#/components/schemas/CreateInstructorDto"
-              }
+              },
+              "example": {"firstName":"Abbosjon","lastName":"Ikromov","email":"abbosjonIkromov25@mail.com","phoneNumber":"94 336 56 55","hireDate":"2025-01-24T00:00:00"}
             }
           }
         },
@@ -474,17 +495,20 @@
             "application/json": {
               "schema": {
                 "$ref": "#/components/schemas/UpdateInstructorDto"
-              }
+              },
+              "example": {"firstName":"Abbosjon","lastName":"Ikromov","email":"abbosjonIkromov25@mail.com","phoneNumber":"94 336 56 55","hireDate":"2025-01-24T00:00:00"}
             },
             "text/json": {
               "schema": {
                 "$ref": "#/components/schemas/UpdateInstructorDto"
-              }
+              },
+              "example": {"firstName":"Abbosjon","lastName":"Ikromov","email":"abbosjonIkromov25@mail.com","phoneNumber":"94 336 56 55","hireDate":"2025-01-24T00:00:00"}
             },
             "application/*+json": {
               "schema": {
                 "$ref": "#/components/schemas/UpdateInstructorDto"
-              }
+              },
+              "example": {"firstName":"Abbosjon","lastName":"Ikromov","email":"abbosjonIkromov25@mail.com","phoneNumber":"94 336 56 55","hireDate":"2025-01-24T00:00:00"}
             }
           }
         },
@@ -602,17 +626,20 @@
             "application/json": {
               "schema": {
                 "$ref": "#/components/schemas/UpdateStudentDto"
-              }
+              },
+              "example": {"firstName":"Abbosjon","lastName":"Ikromov","email":"abbosjonIkromov25@gmail.com","phoneNumber":"94 336 56 55","address":"Tashkent Yunisabad 2/32/38","dateOfBirth":"2025-01-19T00:00:00"}
             },
             "text/json": {
               "schema": {
                 "$ref": "#/components/schemas/UpdateStudentDto"
-              }
+              },
+              "example": {"firstName":"Abbosjon","lastName":"Ikromov","email":"abbosjonIkromov25@gmail.com","phoneNumber":"94 336 56 55","address":"Tashkent Yunisabad 2/32/38","dateOfBirth":"2025-01-19T00:00:00"}
             },
             "application/*+json": {
               "schema": {
                 "$ref": "#/components/schemas/UpdateStudentDto"
-              }
+              },
+              "example": {"firstName":"Abbosjon","lastName":"Ikromov","email":"abbosjonIkromov25@gmail.com","phoneNumber":"94 336 56 55","address":"Tashkent Yunisabad 2/32/38","dateOfBirth":"2025-01-19T00:00:00"}
             }
           }
         },

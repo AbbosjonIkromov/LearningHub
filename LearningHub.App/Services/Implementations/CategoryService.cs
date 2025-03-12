@@ -3,7 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using FluentValidation;
 using LearningHub.App.Dtos.Category;
+using LearningHub.App.Exceptions;
 using LearningHub.App.Services.Contracts;
 using LearningHub.DataAccess.Repository.Contracts;
 using LearningHub.Entities;
@@ -35,7 +37,7 @@ namespace LearningHub.App.Services.Implementations
 
             if (category is null)
             {
-                throw new KeyNotFoundException($"Category with {id} not found");
+                throw new RecordNotFoundException($"Category with {id} not found");
             }
 
             return new CategoryDto
@@ -67,7 +69,7 @@ namespace LearningHub.App.Services.Implementations
             
             if(category is null)
             {
-                throw new KeyNotFoundException($"Category with {id} not found");
+                throw new RecordNotFoundException($"Category with {id} not found");
             }
 
             category.CategoryName = updateCategoryDto.CategoryName;
@@ -86,7 +88,7 @@ namespace LearningHub.App.Services.Implementations
 
             if (category is null)
             {
-                throw new KeyNotFoundException($"Category with {id} not found");
+                throw new RecordNotFoundException($"Category with {id} not found");
             }
             await _categoryRepository.Delete(category);
             return true;

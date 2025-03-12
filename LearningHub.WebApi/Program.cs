@@ -16,10 +16,13 @@ using LearningHub.Data.Interceptor;
 using LearningHub.DataAccess;
 using LearningHub.DataAccess.Repository.Contracts;
 using LearningHub.DataAccess.Repository.Implementations;
+using LearningHub.WebApi.Examples.Category;
+using LearningHub.WebApi.Middleware;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Diagnostics;
 using Microsoft.Extensions.Logging.Abstractions;
+using Swashbuckle.AspNetCore.Filters;
 
 namespace LearningHub.WebApi
 {
@@ -32,7 +35,13 @@ namespace LearningHub.WebApi
             // Add services to the container.
 
             builder.Services.AddControllers();
-            builder.Services.AddSwaggerGen();
+            builder.Services.AddSwaggerGen(options =>
+            {
+                options.ExampleFilters(); // Exaple
+            });
+
+            // Example larni ruyhatdan utkazish
+            builder.Services.AddSwaggerExamplesFromAssemblyOf<CreateCategoryExample>();
 
             // Repositories
             builder.Services.AddScoped<ICategoryRepository, CategoryRepository>();
@@ -48,21 +57,21 @@ namespace LearningHub.WebApi
             builder.Services.AddScoped<IInstructorService, InstructorService>();
             builder.Services.AddScoped<IStudentService, StudentService>();
 
-           // FluentValidation
-            builder.Services.AddFluentValidationAutoValidation();
-            builder.Services.AddValidatorsFromAssemblyContaining<CreateCategoryDto>();
+            // AutoFluentValidation
+            //builder.Services.AddFluentValidationAutoValidation();
+            //builder.Services.AddValidatorsFromAssemblyContaining<CreateCategoryDto>();
 
-
-            //builder.Services.AddScoped<IValidator<CreateCategoryDto>, CreateCategoryDtoValidation>();
-            //builder.Services.AddScoped<IValidator<UpdateCategoryDto>, UpdateCategoryDtoValidation>();
-            //builder.Services.AddScoped<IValidator<CreateCourseDto>, CreateCourseDtoValidation>();
-            //builder.Services.AddScoped<IValidator<UpdateCourseDto>, UpdateCourseDtoValidation>();
-            //builder.Services.AddScoped<IValidator<CreateStudentDto>, CreateStudentDtoValidation>();
-            //builder.Services.AddScoped<IValidator<UpdateStudentDto>, UpdateStudentDtoUpdateValidation>();
-            //builder.Services.AddScoped<IValidator<CreateInstructorDto>, CreateInstructorDtoValidation>();
-            //builder.Services.AddScoped<IValidator<UpdateInstructorDto>, UpdateInstructorDtoValidation>();
-            //builder.Services.AddScoped<IValidator<CreateEnrollmentDto>, CreateEnrollmentDtoValidation>();
-            //builder.Services.AddScoped<IValidator<UpdateEnrollmentDto>, UpdateEnrollmentDtoValidation>();
+            // FluentValidation
+            builder.Services.AddScoped<IValidator<CreateCategoryDto>, CreateCategoryDtoValidation>();
+            builder.Services.AddScoped<IValidator<UpdateCategoryDto>, UpdateCategoryDtoValidation>();
+            builder.Services.AddScoped<IValidator<CreateCourseDto>, CreateCourseDtoValidation>();
+            builder.Services.AddScoped<IValidator<UpdateCourseDto>, UpdateCourseDtoValidation>();
+            builder.Services.AddScoped<IValidator<CreateStudentDto>, CreateStudentDtoValidation>();
+            builder.Services.AddScoped<IValidator<UpdateStudentDto>, UpdateStudentDtoUpdateValidation>();
+            builder.Services.AddScoped<IValidator<CreateInstructorDto>, CreateInstructorDtoValidation>();
+            builder.Services.AddScoped<IValidator<UpdateInstructorDto>, UpdateInstructorDtoValidation>();
+            builder.Services.AddScoped<IValidator<CreateEnrollmentDto>, CreateEnrollmentDtoValidation>();
+            builder.Services.AddScoped<IValidator<UpdateEnrollmentDto>, UpdateEnrollmentDtoValidation>();
 
 
             builder.Services.AddDbContext<LearningHubDbContext>(options =>
@@ -73,6 +82,9 @@ namespace LearningHub.WebApi
             });
 
             var app = builder.Build();
+
+            // Middleware
+            app.UseMiddleware<ErrorsMiddleware>();
 
             // Configure the HTTP request pipeline.
 
