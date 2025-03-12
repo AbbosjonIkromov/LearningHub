@@ -45,7 +45,13 @@ namespace LearningHub.WebApi.Controllers
 
             if (!validation.IsValid)
             {
-                return BadRequest(validation.Errors);
+                var errors = validation.Errors
+                    .Select(r => new
+                    {
+                        r.PropertyName,
+                        r.ErrorMessage
+                    });
+                return BadRequest(errors);
             }
 
             var course = await _courseService.Create(createCourseDto);
@@ -59,7 +65,13 @@ namespace LearningHub.WebApi.Controllers
 
             if (!validation.IsValid)
             {
-                return BadRequest(validation.Errors);
+                var errors = validation.Errors
+                    .Select(r => new
+                    {
+                        r.PropertyName,
+                        r.ErrorMessage
+                    });
+                return BadRequest(errors);
             }
 
             var course = await _courseService.Update(id, updateCourseDto);

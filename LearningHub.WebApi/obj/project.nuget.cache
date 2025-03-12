@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "WW5Ki3hNFFM=",
+  "dgSpecHash": "ywg4B9Jnxig=",
   "success": true,
   "projectFilePath": "C:\\Users\\Lenovo 5i Pro\\source\\repos\\LearningHub\\LearningHub.WebApi\\LearningHub.WebApi.csproj",
   "expectedPackageFiles": [
@@ -38,7 +38,10 @@
     "C:\\Users\\Lenovo 5i Pro\\.nuget\\packages\\mono.texttemplating\\3.0.0\\mono.texttemplating.3.0.0.nupkg.sha512",
     "C:\\Users\\Lenovo 5i Pro\\.nuget\\packages\\npgsql\\9.0.3\\npgsql.9.0.3.nupkg.sha512",
     "C:\\Users\\Lenovo 5i Pro\\.nuget\\packages\\npgsql.entityframeworkcore.postgresql\\9.0.4\\npgsql.entityframeworkcore.postgresql.9.0.4.nupkg.sha512",
+    "C:\\Users\\Lenovo 5i Pro\\.nuget\\packages\\scrutor\\3.3.0\\scrutor.3.3.0.nupkg.sha512",
     "C:\\Users\\Lenovo 5i Pro\\.nuget\\packages\\swashbuckle.aspnetcore\\7.3.1\\swashbuckle.aspnetcore.7.3.1.nupkg.sha512",
+    "C:\\Users\\Lenovo 5i Pro\\.nuget\\packages\\swashbuckle.aspnetcore.filters\\8.0.2\\swashbuckle.aspnetcore.filters.8.0.2.nupkg.sha512",
+    "C:\\Users\\Lenovo 5i Pro\\.nuget\\packages\\swashbuckle.aspnetcore.filters.abstractions\\8.0.2\\swashbuckle.aspnetcore.filters.abstractions.8.0.2.nupkg.sha512",
     "C:\\Users\\Lenovo 5i Pro\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\7.3.1\\swashbuckle.aspnetcore.swagger.7.3.1.nupkg.sha512",
     "C:\\Users\\Lenovo 5i Pro\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\7.3.1\\swashbuckle.aspnetcore.swaggergen.7.3.1.nupkg.sha512",
     "C:\\Users\\Lenovo 5i Pro\\.nuget\\packages\\swashbuckle.aspnetcore.swaggerui\\7.3.1\\swashbuckle.aspnetcore.swaggerui.7.3.1.nupkg.sha512",

@@ -147,3 +147,6 @@ C:\Users\Lenovo 5i Pro\source\repos\LearningHub\LearningHub.WebApi\obj\Debug\net
 C:\Users\Lenovo 5i Pro\source\repos\LearningHub\LearningHub.WebApi\obj\Debug\net8.0\LearningHub.WebApi.pdb
 C:\Users\Lenovo 5i Pro\source\repos\LearningHub\LearningHub.WebApi\obj\Debug\net8.0\LearningHub.WebApi.genruntimeconfig.cache
 C:\Users\Lenovo 5i Pro\source\repos\LearningHub\LearningHub.WebApi\obj\Debug\net8.0\ref\LearningHub.WebApi.dll
+C:\Users\Lenovo 5i Pro\source\repos\LearningHub\LearningHub.WebApi\bin\Debug\net8.0\Scrutor.dll
+C:\Users\Lenovo 5i Pro\source\repos\LearningHub\LearningHub.WebApi\bin\Debug\net8.0\Swashbuckle.AspNetCore.Filters.dll
+C:\Users\Lenovo 5i Pro\source\repos\LearningHub\LearningHub.WebApi\bin\Debug\net8.0\Swashbuckle.AspNetCore.Filters.Abstractions.dll

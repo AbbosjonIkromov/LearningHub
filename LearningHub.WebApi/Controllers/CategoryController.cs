@@ -46,7 +46,13 @@ namespace LearningHub.WebApi.Controllers
 
             if (!validation.IsValid)
             {
-                return BadRequest(validation.Errors);
+                var errors = validation.Errors
+                    .Select(r => new
+                    {
+                        r.PropertyName,
+                        r.ErrorMessage
+                    });
+                return BadRequest(errors);
             }
 
             var category = await _categoryService.Create(createCategoryDto);
@@ -60,7 +66,13 @@ namespace LearningHub.WebApi.Controllers
 
             if (!validation.IsValid)
             {
-                return BadRequest(validation.Errors);
+                var errors = validation.Errors
+                    .Select(r => new
+                    {
+                        r.PropertyName,
+                        r.ErrorMessage
+                    });
+                return BadRequest(errors);
             }
 
             var category = await _categoryService.Update(id, updateCategoryDto);

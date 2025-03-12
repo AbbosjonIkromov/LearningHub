@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using LearningHub.App.Dtos.Student;
+using LearningHub.App.Exceptions;
 using LearningHub.App.Services.Contracts;
 using LearningHub.DataAccess.Repository.Contracts;
 using LearningHub.Entities;
@@ -42,7 +43,7 @@ namespace LearningHub.App.Services.Implementations
 
             if (student is null)
             {
-                throw new KeyNotFoundException($"Student with {id} not found");
+                throw new RecordNotFoundException($"Student with {id} not found");
             }
 
             return new StudentDto
@@ -89,7 +90,7 @@ namespace LearningHub.App.Services.Implementations
 
             if (student is null)
             {
-                throw new KeyNotFoundException($"Student with {id} not found"); 
+                throw new RecordNotFoundException($"Student with {id} not found"); 
             }
 
             student.FirstName = updateStudentDto.FirstName;
@@ -119,7 +120,7 @@ namespace LearningHub.App.Services.Implementations
 
             if (student is null)
             {
-                throw new KeyNotFoundException($"Student with {id} not found");
+                throw new RecordNotFoundException($"Student with {id} not found");
             }
 
             await _studentRepository.Delete(student);

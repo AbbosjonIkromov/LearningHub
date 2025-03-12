@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using LearningHub.App.Dtos.Instructor;
+using LearningHub.App.Exceptions;
 using LearningHub.App.Services.Contracts;
 using LearningHub.DataAccess.Repository.Contracts;
 using LearningHub.Entities;
@@ -40,7 +41,7 @@ namespace LearningHub.App.Services.Implementations
 
             if (instructor is null)
             {
-                throw new KeyNotFoundException($"Instructor with {id} not found");
+                throw new RecordNotFoundException($"Instructor with {id} not found");
             }
 
             return new InstructorDto()
@@ -85,7 +86,7 @@ namespace LearningHub.App.Services.Implementations
 
             if (instructor is null)
             {
-                throw new KeyNotFoundException($"Instructor with {id} not found");
+                throw new RecordNotFoundException($"Instructor with {id} not found");
             }
 
             instructor.FirstName = updateInstructorDto.FirstName;
@@ -113,7 +114,7 @@ namespace LearningHub.App.Services.Implementations
 
             if (instructor is null)
             {
-                throw new KeyNotFoundException($"Instructor with {id} not found");
+                throw new RecordNotFoundException($"Instructor with {id} not found");
             }
             await _instructorRepository.Delete(instructor);
             return true;

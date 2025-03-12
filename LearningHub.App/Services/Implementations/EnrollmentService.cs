@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using LearningHub.App.Dtos.Enrollment;
+using LearningHub.App.Exceptions;
 using LearningHub.App.Services.Contracts;
 using LearningHub.DataAccess.Repository.Contracts;
 using Microsoft.EntityFrameworkCore.ChangeTracking.Internal;
@@ -39,7 +40,7 @@ namespace LearningHub.App.Services.Implementations
 
             if (enrollment is null)
             {
-                throw new KeyNotFoundException($"Enrollment with {id} not found");
+                throw new RecordNotFoundException($"Enrollment with {id} not found");
             }
 
             return new EnrollmentDto
@@ -81,7 +82,7 @@ namespace LearningHub.App.Services.Implementations
 
             if (enrollment is null)
             {
-                throw new KeyNotFoundException($"Enrollment with {id} not found");
+                throw new RecordNotFoundException($"Enrollment with {id} not found");
             }
 
             enrollment.CourseId = updateCourseDto.CourseId;
@@ -107,7 +108,7 @@ namespace LearningHub.App.Services.Implementations
 
             if (enrollment is null)
             {
-                throw new KeyNotFoundException($"Enrollment with {id} not found");
+                throw new RecordNotFoundException($"Enrollment with {id} not found");
             }
 
             await _enrollmentRepository.Delete(enrollment);
