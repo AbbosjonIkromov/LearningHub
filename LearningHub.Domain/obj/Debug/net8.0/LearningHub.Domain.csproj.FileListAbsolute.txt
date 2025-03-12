@@ -1,0 +1,12 @@
+C:\Users\Lenovo 5i Pro\source\repos\LearningHub\LearningHub.Domain\bin\Debug\net8.0\LearningHub.Domain.deps.json
+C:\Users\Lenovo 5i Pro\source\repos\LearningHub\LearningHub.Domain\bin\Debug\net8.0\LearningHub.Domain.dll
+C:\Users\Lenovo 5i Pro\source\repos\LearningHub\LearningHub.Domain\bin\Debug\net8.0\LearningHub.Domain.pdb
+C:\Users\Lenovo 5i Pro\source\repos\LearningHub\LearningHub.Domain\obj\Debug\net8.0\LearningHub.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Lenovo 5i Pro\source\repos\LearningHub\LearningHub.Domain\obj\Debug\net8.0\LearningHub.Domain.AssemblyInfoInputs.cache
+C:\Users\Lenovo 5i Pro\source\repos\LearningHub\LearningHub.Domain\obj\Debug\net8.0\LearningHub.Domain.AssemblyInfo.cs
+C:\Users\Lenovo 5i Pro\source\repos\LearningHub\LearningHub.Domain\obj\Debug\net8.0\LearningHub.Domain.csproj.CoreCompileInputs.cache
+C:\Users\Lenovo 5i Pro\source\repos\LearningHub\LearningHub.Domain\obj\Debug\net8.0\LearningHub.Domain.sourcelink.json
+C:\Users\Lenovo 5i Pro\source\repos\LearningHub\LearningHub.Domain\obj\Debug\net8.0\LearningHub.Domain.dll
+C:\Users\Lenovo 5i Pro\source\repos\LearningHub\LearningHub.Domain\obj\Debug\net8.0\refint\LearningHub.Domain.dll
+C:\Users\Lenovo 5i Pro\source\repos\LearningHub\LearningHub.Domain\obj\Debug\net8.0\LearningHub.Domain.pdb
+C:\Users\Lenovo 5i Pro\source\repos\LearningHub\LearningHub.Domain\obj\Debug\net8.0\ref\LearningHub.Domain.dll

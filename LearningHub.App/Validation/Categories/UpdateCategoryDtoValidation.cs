@@ -1,0 +1,21 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using FluentValidation;
+using LearningHub.App.Dtos.Category;
+
+namespace LearningHub.App.Validation.Categories
+{
+    public class UpdateCategoryDtoValidation : AbstractValidator<UpdateCategoryDto>
+    {
+        public UpdateCategoryDtoValidation()
+        {
+            RuleFor(r => r.CategoryName)
+                .NotEmpty()
+                .WithMessage("Category name is required")
+                .MaximumLength(255);
+        }
+    }
+}

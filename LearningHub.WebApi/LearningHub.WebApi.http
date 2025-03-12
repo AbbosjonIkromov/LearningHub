@@ -1,0 +1,6 @@
+@LearningHub.WebApi_HostAddress = http://localhost:5057
+
+GET {{LearningHub.WebApi_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
